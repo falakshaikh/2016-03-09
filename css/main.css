@@ -1,7 +1,7 @@
 body {
-  background-color: #422424;
-  font-size: 16px;
-  color: #ffcccc;
+  background-color: #000000;
+  font-size: 1em;
+  color: #808080;
 }
 .page-container {
   width: 90%;
@@ -9,9 +9,9 @@ body {
 }
 h1 {
   margin-bottom: 20px;
-  border-top: solid #660000 15px;
+  border-top: solid #000000 15px;
   font-family: 'Bubbler One', sans-serif;
-  font-size: 48px;
+  font-size: 3em;
   color: white;
 }
 h1 + h2 {
@@ -19,13 +19,13 @@ h1 + h2 {
 }
 h2 {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 32px;
+  font-size: 2em;
 }
 h2 + p {
   margin-top: 36px;
 }
 img {
-  width: 300px;
+  width: 45%;
   margin: 20px 20px 20px 0px;
   float: left;
 }
@@ -33,6 +33,20 @@ p {
   font-family: 'Arya', sans-serif;
 }
 p img {
-  float: none;
-  width: 100px;
+  float: right;
+  width: 20%;
+}
+@media screen and (min-width: 550px) {
+  body {
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .page-container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 900px) body {
+  font-size: 1.2em;
 }
