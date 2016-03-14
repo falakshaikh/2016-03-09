@@ -1,7 +1,89 @@
 // out: css/main.css, sourcemap: true
-@brick: darken(red, 30%);
-@brick-mute: desaturate(@brick, 70%);
 
-body{
+//COLOR VARIABLES
+@brick: darken(blue, 80%);
+@brick-mute: desaturate(@brick, 60%);
+@brick-light: lighten(@brick, 50%);
+
+//TYPE VARIABLES
+@regular: 1em;
+@large: @regular * 2;
+@x-large: @large * 1.5;
+
+body {
   background-color: @brick-mute;
+  font-size: @regular;
+  color: @brick-light;
+}
+
+.page-container {
+    width: 90%;
+    margin:0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  border-top: solid @brick 15px;
+  font-family: 'Bubbler One', sans-serif;
+  font-size: @x-large;
+  color: white;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  + h2 {
+    margin-top: -20px;
+  }
+}
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: @large;
+
+  + p {
+  margin-top: 36px;
+  }
+}
+
+img {
+  max-width: 576px;
+  margin: 20px 20px 20px 0px;
+  float: left;
+
+}
+
+p {
+  font-family: 'Arya', sans-serif;
+
+
+  img {
+    float: right;
+    max-width: 364px;
+    padding: 15px;
+    position: fixed;
+  }
+}
+
+
+
+
+
+//BREAKPOINTS
+@media screen and (min-width: 550px) {
+
+  body {
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: @x-large;
+  }
+
+  .page-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 900px)
+body {
+  font-size: 1.2em;
 }
